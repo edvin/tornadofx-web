@@ -15,7 +15,7 @@ class FelixDownloadServlet : HttpServlet() {
     companion object {
         val FelixVersion = "5.6.8"
         val JavaFXSupportVersion = "8.0.1"
-        val ConfigAdminVersion = "1.8.14"
+        val ConfigAdminVersion = "1.8.16"
         val JsonVersion = "1.0.4"
         val KotlinVersion = "1.1.51"
         val CommonsLoggingVersion = "1.2"
