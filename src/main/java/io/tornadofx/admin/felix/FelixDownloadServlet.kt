@@ -17,6 +17,7 @@ class FelixDownloadServlet : HttpServlet() {
         val JavaFXSupportVersion = "8.0.2"
         val ConfigAdminVersion = "1.8.16"
         val JsonVersion = "1.1.2"
+        val JsonAPIVersion = "1.1.2"
         val KotlinVersion = "1.2.31"
         val CommonsLoggingVersion = "1.2"
         val HttpClientVersion = "4.5.3"
@@ -26,6 +27,7 @@ class FelixDownloadServlet : HttpServlet() {
         val JavaFXSupportURI = URI.create("http://repo1.maven.org/maven2/no/tornado/javafx-osgi/$JavaFXSupportVersion/javafx-osgi-$JavaFXSupportVersion.jar")
         val ConfigAdminURI = URI.create("http://www-eu.apache.org/dist/felix/org.apache.felix.configadmin-$ConfigAdminVersion.jar")
         val JsonURI = URI.create("http://repo1.maven.org/maven2/org/glassfish/javax.json/$JsonVersion/javax.json-$JsonVersion.jar")
+        val JsonAPIURI = URI.create("http://repo1.maven.org/javax/json/javax.json-api/$JsonAPIVersion/javax.json-api-$JsonVersion.jar")
         val KotlinURI = URI.create("http://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-osgi-bundle/$KotlinVersion/kotlin-osgi-bundle-$KotlinVersion.jar")
         val CommonsLoggingURI = URI.create("http://repo1.maven.org/maven2/commons-logging/commons-logging/$CommonsLoggingVersion/commons-logging-$CommonsLoggingVersion.jar")
         val HttpClientURI = URI.create("http://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient-osgi/$HttpClientVersion/httpclient-osgi-$HttpClientVersion.jar")
@@ -49,6 +51,7 @@ class FelixDownloadServlet : HttpServlet() {
                 output.embedLibrary(HttpClientURI)
                 output.embedLibrary(HttpCoreURI)
                 output.embedLibrary(JsonURI)
+                output.embedLibrary(JsonAPIURI)
             }
         }
     }
