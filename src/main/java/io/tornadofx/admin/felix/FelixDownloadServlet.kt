@@ -24,21 +24,21 @@ class FelixDownloadServlet : HttpServlet() {
         val HttpCoreVersion = "4.4.6"
 
         val FelixURI = URI.create("http://www-eu.apache.org/dist/felix/org.apache.felix.main.distribution-$FelixVersion.zip")
-        val JavaFXSupportURI = URI.create("http://repo1.maven.org/maven2/no/tornado/javafx-osgi/$JavaFXSupportVersion/javafx-osgi-$JavaFXSupportVersion.jar")
+        val JavaFXSupportURI = URI.create("https://repo1.maven.org/maven2/no/tornado/javafx-osgi/$JavaFXSupportVersion/javafx-osgi-$JavaFXSupportVersion.jar")
         val ConfigAdminURI = URI.create("http://www-eu.apache.org/dist/felix/org.apache.felix.configadmin-$ConfigAdminVersion.jar")
-        val JsonURI = URI.create("http://repo1.maven.org/maven2/org/glassfish/javax.json/$JsonVersion/javax.json-$JsonVersion.jar")
-        val JsonAPIURI = URI.create("http://repo1.maven.org/maven2/javax/json/javax.json-api/$JsonAPIVersion/javax.json-api-$JsonAPIVersion.jar")
-        val KotlinURI = URI.create("http://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-osgi-bundle/$KotlinVersion/kotlin-osgi-bundle-$KotlinVersion.jar")
-        val CommonsLoggingURI = URI.create("http://repo1.maven.org/maven2/commons-logging/commons-logging/$CommonsLoggingVersion/commons-logging-$CommonsLoggingVersion.jar")
-        val HttpClientURI = URI.create("http://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient-osgi/$HttpClientVersion/httpclient-osgi-$HttpClientVersion.jar")
-        val HttpCoreURI = URI.create("http://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore-osgi/$HttpCoreVersion/httpcore-osgi-$HttpCoreVersion.jar")
+        val JsonURI = URI.create("https://repo1.maven.org/maven2/org/glassfish/javax.json/$JsonVersion/javax.json-$JsonVersion.jar")
+        val JsonAPIURI = URI.create("https://repo1.maven.org/maven2/javax/json/javax.json-api/$JsonAPIVersion/javax.json-api-$JsonAPIVersion.jar")
+        val KotlinURI = URI.create("https://repo1.maven.org/maven2/org/jetbrains/kotlin/kotlin-osgi-bundle/$KotlinVersion/kotlin-osgi-bundle-$KotlinVersion.jar")
+        val CommonsLoggingURI = URI.create("https://repo1.maven.org/maven2/commons-logging/commons-logging/$CommonsLoggingVersion/commons-logging-$CommonsLoggingVersion.jar")
+        val HttpClientURI = URI.create("https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient-osgi/$HttpClientVersion/httpclient-osgi-$HttpClientVersion.jar")
+        val HttpCoreURI = URI.create("https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore-osgi/$HttpCoreVersion/httpcore-osgi-$HttpCoreVersion.jar")
     }
 
     override fun doGet(request: HttpServletRequest, response: HttpServletResponse) {
         response.addHeader("Content-Type", "application/octet-stream")
 
         val TornadoFXVersion = MavenMetadata.getTornadoFX().versioning.latest
-        val TornadoFXURI = URI.create("http://repo1.maven.org/maven2/no/tornado/tornadofx/$TornadoFXVersion/tornadofx-$TornadoFXVersion.jar")
+        val TornadoFXURI = URI.create("https://repo1.maven.org/maven2/no/tornado/tornadofx/$TornadoFXVersion/tornadofx-$TornadoFXVersion.jar")
 
         ZipInputStream(FelixURI.toURL().openStream()).use { input ->
             ZipOutputStream(response.outputStream).use { output ->

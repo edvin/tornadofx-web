@@ -13,7 +13,7 @@ class MavenMetadata {
     }
 
     companion object {
-        fun getTornadoFX(): MavenMetadata = JAXB.unmarshal(URI.create("http://repo1.maven.org/maven2/no/tornado/tornadofx/maven-metadata.xml"), MavenMetadata::class.java)
+        fun getTornadoFX(): MavenMetadata = JAXB.unmarshal(URI.create("https://repo1.maven.org/maven2/no/tornado/tornadofx/maven-metadata.xml"), MavenMetadata::class.java)
 
     }
 }
