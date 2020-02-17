@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse
 @WebServlet("/felix-bundle.zip")
 class FelixDownloadServlet : HttpServlet() {
     companion object {
-        val FelixVersion = "6.0.2"
+        val FelixVersion = "6.0.3"
         val JavaFXSupportVersion = "8.0.2"
-        val ConfigAdminVersion = "1.9.10"
+        val ConfigAdminVersion = "1.9.16"
         val JsonVersion = "1.1.2"
         val JsonAPIVersion = "1.1.2"
-        val KotlinVersion = "1.3.21"
+        val KotlinVersion = "1.3.61"
         val CommonsLoggingVersion = "1.2"
         val HttpClientVersion = "4.5.3"
         val HttpCoreVersion = "4.4.6"
